@@ -1,28 +1,26 @@
-# 8RemotesRysGitTutorial
+# [go back to content](https://github.com/c4arl0s/RysGitTutorial#rys-git-tutorial)
 
-8 Remotes Rys Git Tutorial
+# [8 Remotes Rys Git Tutorial - Content](https://github.com/c4arl0s/8RemotesRysGitTutorial#go-back-to-content)
+ * [Clone the Repository (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#-clone-the-repository-mary)
+ * [Configure The Repository (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#-configure-the-repository-mary)
+ * [Start Mary's Day (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#-start-marys-day-mary)
+ * [Create Mary's Bio Page](https://github.com/c4arl0s/8RemotesRysGitTutorial#-create-marys-bio-page)
+ * [Publish the Bio Page (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#-publish-the-bio-page-mary)
+ * [View Remote Repositories (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#-view-remote-repositories-mary)
+ * [Return to Your Repository (you)](https://github.com/c4arl0s/8RemotesRysGitTutorial#-return-to-your-repository-you)
+ * [Add Mary as a Remote (you)](https://github.com/c4arl0s/8RemotesRysGitTutorial#-add-mary-as-a-remote-you)
+ * [Fetch Mary's Branches (you)](https://github.com/c4arl0s/8RemotesRysGitTutorial#-fetch-marys-branches-you)
+ * [Check out a Remote Branch](https://github.com/c4arl0s/8RemotesRysGitTutorial#-check-out-a-remote-branch)
+ * [Find Mary's Changes](https://github.com/c4arl0s/8RemotesRysGitTutorial#-find-marys-changes)
+ * [Merge Mary's Changes](https://github.com/c4arl0s/8RemotesRysGitTutorial#-merge-marys-changes)
+ * [Push a Dummy Branch](https://github.com/c4arl0s/8RemotesRysGitTutorial#-push-a-dummy-branch)
+ * [Push a New Tag](https://github.com/c4arl0s/8RemotesRysGitTutorial#-push-a-new-tag)
+ * [Conclusion](https://github.com/c4arl0s/8RemotesRysGitTutorial#-conclusion)
+ * [Quick Reference](https://github.com/c4arl0s/8RemotesRysGitTutorial#-quick-reference)
 
-# 8. [Remotes](https://github.com/c4arl0s/RysGitTutorial#8-remotes-1)
- * [Clone the Repository (Mary)](https://github.com/c4arl0s/RysGitTutorial#-clone-the-repository-mary)
- * [Configure The Repository (Mary)](https://github.com/c4arl0s/RysGitTutorial#-configure-the-repository-mary)
- * [Start Mary's Day (Mary)](https://github.com/c4arl0s/RysGitTutorial#-start-marys-day-mary)
- * [Create Mary's Bio Page](https://github.com/c4arl0s/RysGitTutorial#-create-marys-bio-page)
- * [Publish the Bio Page (Mary)](https://github.com/c4arl0s/RysGitTutorial#-publish-the-bio-page-mary)
- * [View Remote Repositories (Mary)](https://github.com/c4arl0s/RysGitTutorial#-view-remote-repositories-mary)
- * [Return to Your Repository (you)](https://github.com/c4arl0s/RysGitTutorial#-return-to-your-repository-you)
- * [Add Mary as a Remote (you)](https://github.com/c4arl0s/RysGitTutorial#-add-mary-as-a-remote-you)
- * [Fetch Mary's Branches (you)](https://github.com/c4arl0s/RysGitTutorial#-fetch-marys-branches-you)
- * [Check out a Remote Branch](https://github.com/c4arl0s/RysGitTutorial#-check-out-a-remote-branch)
- * [Find Mary's Changes](https://github.com/c4arl0s/RysGitTutorial#-find-marys-changes)
- * [Merge Mary's Changes](https://github.com/c4arl0s/RysGitTutorial#-merge-marys-changes)
- * [Push a Dummy Branch](https://github.com/c4arl0s/RysGitTutorial#-push-a-dummy-branch)
- * [Push a New Tag](https://github.com/c4arl0s/RysGitTutorial#-push-a-new-tag)
- * [Conclusion](https://github.com/c4arl0s/RysGitTutorial#-conclusion-6)
- * [Quick Reference](https://github.com/c4arl0s/RysGitTutorial#-quick-reference-4)
+# [8 Remotes Rys Git Tutorial](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-# 8. [Remotes](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
-
-Simply put, a **remote repository*** is one that is not your own. It can be another Git repository that is on your company's network, the internet, or even your local file system, but the point is that it is a repository distinct from your my-git-repository project.
+Simply put, a **remote repository** is one that is not your own. It can be another Git repository that is on your company's network, the internet, or even your local file system, but the point is that it is a repository distinct from your my-git-repository project.
 
 We have already seen how branches can streamline a workflow within a single repository, but they also happen to be Git's mechanism for sharing commits between repositories. **Remote Brances** act just like the local branches that we have been using, only the represent a branch in someone else's repository.
 
@@ -32,7 +30,7 @@ This means we can adapt our merging and rebasing skills to make Git fantastic co
 
 For several parts of this module, we are going to pretend to be Mary, the graphic designer for our website. Mary's actions are clearly denoted by including her name in the heading of each step.
 
-# 	* [Clone the Repository (Mary)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Clone the Repository (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 First, Mary needs her own copy of the repository to work with. The **Distributed Workflows** module will discuss network-based remotes, but right new we are just going to store them on the local filesystem.
 
@@ -104,7 +102,7 @@ e1bc771 add a rainbow to crazy.html
 1047951 t Add blue an orange html files
 6a442fc Create index page for the message
 ```
-# 	* [Configure The Repository (Mary)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Configure The Repository (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 First off, Mary needs to configure her repository so that we know who contributed what to the project.
 
@@ -146,7 +144,7 @@ $ cat .git/config
 
 Use a text editor to open up the file called **config** in the **.git** directory of Mary's project (you may  need to enable hidden files to see .git). This is where local configurations are stored, and we see Mary's information at the bottom of the file. Note that this overrides the global configuration that we set in **The basics**
 
-# 	* [Start Mary's Day (Mary)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Start Mary's Day (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 Today, Mary is going to be working on her bio page, which she should develop in a separate branch:
 
@@ -156,7 +154,7 @@ git checkout -b bio-page
 
 Mary can create and check out branches just like we did in our copy of the project. Her repository is a completely isolated development enviroment, and she can do whatever she wants in her without worrying about what's going on in my git repository. Just as branches are an abstraction for the working directory, the staged snapshot, and a commit history, a repository is an abstraction for branches.
 
-# 	* [Create Mary's Bio Page](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Create Mary's Bio Page](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 Let's complete Mary's biography page. In mary's repository, change about/mary.html to:
 
@@ -210,7 +208,7 @@ Date:   Fri Jun 5 11:09:51 2020 -0500
 
 [Check why the email was not changed]()
 
-# 	* [Publish the Bio Page (Mary)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Publish the Bio Page (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 Now, we can publish the bio page by merging into the **master** branch:
 
@@ -264,7 +262,7 @@ Of course, this results in a fast-forward merge.
 
 Notice that both repositories have normal, local branches - we have not had any interaction between the two repositories, so we don't see any remote branches yet. Before we switch back to my git repository, let's examine Mary's remote connections.
 
-# 	* [View Remote Repositories (Mary)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [View Remote Repositories (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 Mary can list the connections she has to other repositories using the following command.
 
@@ -285,7 +283,7 @@ origin	/Users/carlossantiagocruz/iOS/RysGitTutorialRepository/ (push)
 
 This shows the full path to our original repository, verifying that **origin** is a remote connection to my git repository. The same path is designated as a **"fetch"** and a **"push"** location. We will see what these means in a moment.
 
-# 	* [Return to Your Repository (you)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Return to Your Repository (you)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 OK, we are done being Mary, and we can return to our own repository:
 
@@ -295,7 +293,7 @@ $ cd ../RysGitTutorialRepository/
 
 Notice that Mar's bio page is still empty. It is very important to understand that this repository and Mary's repository are completely separate. While she was altering her bio page, we could have been doing all sorts of other things in my git repository. We could have even changed her bio page, which would result in a merge conflict when we try to pull her changes in.
 
-# 	* [Add Mary as a Remote (you)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Add Mary as a Remote (you)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 Before we can get ahold of Mar's bio page, we need access to her repository. Let's look at our current list of remotes:
 
@@ -322,7 +320,7 @@ We can now use **mary** to refer to Mar's repository, which is located at ../Rys
 
 Now that our remote **repositories are setup, we will spend the rest of the module discussing remote **branches**
 
-# 	* [Fetch Mary's Branches (you)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Fetch Mary's Branches (you)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 As noted earlier, we can use remote branches to access snapshots from another repository. Let's take a look at our current remote branches with the - flag.]()
 
@@ -366,7 +364,7 @@ That is to say, our remote branches are not **direct** links into Mary's reposit
 
 The above figure shows the state of **our** repository. We have access to Mary's snapshot (represented by sqeares) and her branches, even though we don't have a real-time connection to Mary's repository.
 
-# 	* [Check out a Remote Branch](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Check out a Remote Branch](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 Let's check out a remote branch to review Mary's changes.
 
@@ -399,7 +397,7 @@ This puts us in a **detached** HEAD state, just like we were in when we checked 
 
 We can't continue developing if we are not on a local branch. To build on **mary/master** we either need to merge it into our own local **master** or create another branch. We did the latter in Branches, Part I to build on an old commit and in the previous module to revive a "lost commit, but right now we are just looking at what Mary did, so the **detached** HEAD state does not really affect us.
 
-# 	* [Find Mary's Changes](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Find Mary's Changes](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 We can use the same log-filtering syntax from the previous module to view Mary's changes:
 
@@ -427,7 +425,7 @@ $
 
 This will not output anything, since we haven't altered our data-base since Mary cloned it, In other words, our history hasn't **diverged** - **we are just behind by a commit**.
 
-# 	* [Merge Mary's Changes](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Merge Mary's Changes](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 Let's approve Mary's changes and integrate them into our own **master** branch.
 
@@ -451,7 +449,7 @@ After the merge, the snapshots from Mary's remote branch become a part of a our 
 
 Notice that we only interacted with Mary's **master** branch, even though we had access to her **bio-page**. If we hadn't been pretending to be Mary, we wouldn't have known what this feature branch was for it or if it was ready to be merged. But, since we've designated **master** as a stable branch for the project, it was safe to integrate those updates (assuming Mary was also aware of this convention).
 
-# 	* [Push a Dummy Branch](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Push a Dummy Branch](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 To complement our **git fetch** command, we will take a brief look at **pushing**. Fetching and pushing are **almost** opposites, in that fetching imports branches, while pushing exports branches to another repository. Let's take a look:
 
@@ -507,7 +505,7 @@ $ git branch -d dummy
 Deleted branch dummy (was 49baa6e).
 ```
 
-# 	* [Push a New Tag](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Push a New Tag](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 An important property of **git push** is that it does not automatically push tag associated with a particular branch. Let's examine this by creating a new tag.
 
@@ -518,7 +516,7 @@ $ git tag -a v2.0 -m "An even stabler version of the website"
 
 We now have a v2.0 tag in my git repository, which we can see by running the **git tag** command. Now, let's try pushing the branch to Mary's repository.
 
-```
+```console
 $ git push mary master
 Everything up-to-date
 ```
@@ -546,7 +544,7 @@ v1.0
 v2.0
 ```
 
-# 	* [Conclusion](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Conclusion](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 In this module, we learned how remote branches can be used to access content in someone else's repository. The remotes listed in **git remote** are merely bookmarks for a full path to another repository. We used a local path, but as we will soon see, Git can use the SSH protocol to access repositories on another computer.
 
@@ -556,7 +554,7 @@ That said, it is important to note that remotes are for **people**, whereas bran
 
 Now that we know how Git shares information between repositories, we can add some more structure to our multi-user development environment. The next module will show you how to set up and access a shared central repository.
 
-# 	* [Quick Reference](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Quick Reference](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 ```console
 $ git -- clone remothePath
