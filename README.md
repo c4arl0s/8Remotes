@@ -20,19 +20,19 @@
 
 # [8 Remotes Rys Git Tutorial](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-Simply put, a **remote repository** is one that is not your own. It can be another Git repository that is on your company's network, the internet, or even your local file system, but the point is that it is a repository distinct from your my-git-repository project.
+Simply put, a remote repository is one that is not your own. It can be another Git repository that is on your company's network, the internet, or even your local file system, but the point is that it is a repository distinct from your my-git-repository project.
 
-We have already seen how branches can streamline a workflow within a single repository, but they also happen to be Git's mechanism for sharing commits between repositories. **Remote Brances** act just like the local branches that we have been using, only the represent a branch in someone else's repository.
+We have already seen how branches can streamline a workflow within a single repository, but they also happen to be Git's mechanism for sharing commits between repositories. **Remote Branches act just like the local branches that we have been using, only the represent a branch in someone else's repository**.
 
 ![Screen Shot 2020-06-03 at 12 30 45](https://user-images.githubusercontent.com/24994818/83668761-1721f400-a596-11ea-9f23-26b12b25960e.png)
 
-This means we can adapt our merging and rebasing skills to make Git fantastic collaboration tool. Over the next few modules, we will be exploring various multi-user workflows by pretending to be different developers woking on our example website.
+**This means we can adapt our merging and rebasing skills to make Git fantastic collaboration tool**. Over the next few modules, we will be exploring various multi-user workflows by pretending to be different developers working on our example website.
 
-For several parts of this module, we are going to pretend to be Mary, the graphic designer for our website. Mary's actions are clearly denoted by including her name in the heading of each step.
+**For several parts of this module, we are going to pretend to be Mary, the graphic designer for our website**. Mary's actions are clearly denoted by including her name in the heading of each step.
 
 # 	* [Clone the Repository (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-First, Mary needs her own copy of the repository to work with. The **Distributed Workflows** module will discuss network-based remotes, but right new we are just going to store them on the local filesystem.
+First, Mary needs her own copy of the repository to work with. **The Distributed Workflows module will discuss network-based remotes, but right now we are just going to store them on the local filesystem**.
 
 ```console
 cd /Users/carlossantiagocruz/iOS/RysGitTutorialRepository
@@ -42,7 +42,7 @@ cd /Users/carlossantiagocruz/iOS/RysGitTutorialRepository
 cd ..
 ```
 
-- Before we continue, I have to go back to fix the following command to pass the --local flag to do the correct cloning.
+Before we continue, I have to go back to fix the following command to pass the --local flag to do the correct cloning.
 
 ```console
 $ git clone --local RysGitTutorialRepository/ RysGitTutorialMarysRepository
@@ -58,7 +58,7 @@ about        green.html   news-1.html  orange.html  red.html     yellow.html
 blue.html    index.html   news-2.html  rainbow.html style.css
 ```
 
-The first two lines navigate the command shell to the directory **above** RysGitTutorialMarysRepository. Make sure to change to the actual path to your repository. The **git clone** command copies our repository into RysGitTutorialMarysRepository, which will reside in the same directory as my git repository. Then, we navigate to the Mary's repository so we can start pretending to be Mary.
+**The first two lines navigate the command shell to the directory above RysGitTutorialMarysRepository**. Make sure to change to the actual path to your repository. The git clone command copies our repository into RysGitTutorialMarysRepository, which will reside in the same directory as my git repository. Then, we navigate to the Mary's repository so we can start pretending to be Mary.
 
 First show all directories involved
 
@@ -74,7 +74,7 @@ RysGitTutorialMarysRepository:
 about        blue.html    green.html   index.html   news-1.html  news-2.html  orange.html  rainbow.html red.html     style.css    yellow.html
 ```
 
-Run **git log** verify that Mary's repository is in fact a copy of our original repository.
+Run git log verify that Mary's repository is in fact a copy of our original repository.
 
 ```console
 $ git log --oneline
@@ -104,7 +104,7 @@ e1bc771 add a rainbow to crazy.html
 ```
 # 	* [Configure The Repository (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-First off, Mary needs to configure her repository so that we know who contributed what to the project.
+**First off, Mary needs to configure her repository so that we know who contributed what to the project**.
 
 ```console
 $ git config user.name "Mary"
@@ -114,7 +114,7 @@ $ git config user.name "Mary"
 $ git config user.mail mary.example@icloud.com
 ```
 
-You may recall from the first module that we used a **--global** flag to set the configuration for the entire Git installation. But since Mary's repository is on the local **filesystem**, she needs a **local** configuration.
+You may recall from the first module that we used a --global flag to set the configuration for the entire Git installation. **But since Mary's repository is on the local filesystem, she needs a local configuration**.
 
 ```console
 $ ls .git
@@ -142,7 +142,7 @@ $ cat .git/config
 	mail = mary.example@icloud.com
 ```
 
-Use a text editor to open up the file called **config** in the **.git** directory of Mary's project (you may  need to enable hidden files to see .git). This is where local configurations are stored, and we see Mary's information at the bottom of the file. Note that this overrides the global configuration that we set in **The basics**
+Use a text editor to open up the file called config in the .git directory of Mary's project (you may  need to enable hidden files to see .git). This is where local configurations are stored, and we see Mary's information at the bottom of the file. **Note that this overrides the global configuration that we set in The basics**.
 
 # 	* [Start Mary's Day (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
@@ -152,7 +152,7 @@ Today, Mary is going to be working on her bio page, which she should develop in 
 git checkout -b bio-page
 ```
 
-Mary can create and check out branches just like we did in our copy of the project. Her repository is a completely isolated development enviroment, and she can do whatever she wants in her without worrying about what's going on in my git repository. Just as branches are an abstraction for the working directory, the staged snapshot, and a commit history, a repository is an abstraction for branches.
+**Mary can create and check out branches just like we did in our copy of the project**. Her repository is a completely isolated development enviroment, and she can do whatever she wants in her without worrying about what's going on in my git repository. **Just as branches are an abstraction for the working directory, the staged snapshot, and a commit history, a repository is an abstraction for branches**.
 
 # 	* [Create Mary's Bio Page](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
@@ -180,7 +180,7 @@ Let's complete Mary's biography page. In mary's repository, change about/mary.ht
 </html>
 ```
 
-Again, we are developing this in a branch as a best-practice step: our **master** branch is only for stable, tested code. Stage and commit the snapshot, then take a look at the result.
+**Again, we are developing this in a branch as a best-practice step: our master branch is only for stable, tested code**. Stage and commit the snapshot, then take a look at the result.
 
 ```console
 $ git commit -a -m "Add bio page for mary"
@@ -195,7 +195,7 @@ Date:   Fri Jun 5 11:09:51 2020 -0500
     Add bio page for mary
 ```
 
-The **Author** field in the log output should reflect the local configurations we made for Mary's name and email. Remember that -n -1 flags limits history output to a single commit.
+The Author field in the log output should reflect the local configurations we made for Mary's name and email. Remember that -n -1 flags limits history output to a single commit.
 
 ```console
 $ git log -n 1
@@ -210,7 +210,7 @@ Date:   Fri Jun 5 11:09:51 2020 -0500
 
 # 	* [Publish the Bio Page (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-Now, we can publish the bio page by merging into the **master** branch:
+Now, we can publish the bio page by merging into the master branch:
 
 ```console
 $ git checkout master
@@ -226,7 +226,7 @@ Oh Crap !!!
 merge: bio-page - not something we can merge
 ```
 
-I suppose the repository was not created correctly, reading more documentation it suggest to pass the --local flag when you cloning.
+**I suppose the repository was not created correctly, reading more documentation it suggest to pass the --local flag when you cloning**.
 
 So do it again, and configure.
 
@@ -234,7 +234,7 @@ So do it again, and configure.
 $ git clone --local RysGitTutorialRepository/ RysGitTutorialMarysRepository
 ```
 
-the configure:
+Then configure:
 
 ```console
 $ git config user.name "Mary"
@@ -260,11 +260,11 @@ Of course, this results in a fast-forward merge.
 
 ![Screen Shot 2020-06-05 at 11 43 05](https://user-images.githubusercontent.com/24994818/83902300-be7f6200-a721-11ea-880d-fb7689c54d45.png)
 
-Notice that both repositories have normal, local branches - we have not had any interaction between the two repositories, so we don't see any remote branches yet. Before we switch back to my git repository, let's examine Mary's remote connections.
+**Notice that both repositories have normal, local branches - we have not had any interaction between the two repositories, so we don't see any remote branches yet**. Before we switch back to my git repository, let's examine Mary's remote connections.
 
 # 	* [View Remote Repositories (Mary)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-Mary can list the connections she has to other repositories using the following command.
+**Mary can list the connections she has to other repositories using the following command**.
 
 ```console
 Fri Jun 05 ~/iOS/RysGitTutorialMarysRepository 
@@ -272,7 +272,7 @@ $ git remote
 origin
 ```
 
-Apparently, she has a remote called **origin**. When you clone a repository, Git automatically adds an **origin**. When you clone a repository, Git automatically adds an **origin** remote pointing to the original repository, under the assumption that you will probably want to interact with it down to the road. We can request a little bit more information with -v (verbose) flag:
+Apparently, she has a remote called origin. When you clone a repository, Git automatically adds an origin. **When you clone a repository, Git automatically adds an origin remote pointing to the original repository, under the assumption that you will probably want to interact with it down to the road**. We can request a little bit more information with -v (verbose) flag:
 
 ```cosole
 Fri Jun 05 ~/iOS/RysGitTutorialMarysRepository 
@@ -281,7 +281,9 @@ origin	/Users/carlossantiagocruz/iOS/RysGitTutorialRepository/ (fetch)
 origin	/Users/carlossantiagocruz/iOS/RysGitTutorialRepository/ (push)
 ```
 
-This shows the full path to our original repository, verifying that **origin** is a remote connection to my git repository. The same path is designated as a **"fetch"** and a **"push"** location. We will see what these means in a moment.
+**This shows the full path to our original repository, verifying that origin is a remote connection to my git repository**. 
+
+> The same path is designated as a "fetch" and a "push" location. We will see what these means in a moment.
 
 # 	* [Return to Your Repository (you)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
@@ -291,7 +293,7 @@ OK, we are done being Mary, and we can return to our own repository:
 $ cd ../RysGitTutorialRepository/
 ```
 
-Notice that Mar's bio page is still empty. It is very important to understand that this repository and Mary's repository are completely separate. While she was altering her bio page, we could have been doing all sorts of other things in my git repository. We could have even changed her bio page, which would result in a merge conflict when we try to pull her changes in.
+Notice that Mar's bio page is still empty. **It is very important to understand that this repository and Mary's repository are completely separate**. While she was altering her bio page, we could have been doing all sorts of other things in my git repository. We could have even changed her bio page, which would result in a merge conflict when we try to pull her changes in.
 
 # 	* [Add Mary as a Remote (you)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
@@ -301,7 +303,7 @@ Before we can get ahold of Mar's bio page, we need access to her repository. Let
 $ git remote
 ```
 
-We don't have any (**origin** was never created because we didn't clone from anywhere). So, let's add Mary as a remote repository
+We don't have any (origin was never created because we didn't clone from anywhere). **So, let's add Mary as a remote repository**
 
 ```console
 $ git remote add mary ../RysGitTutorialMarysRepository/
@@ -314,21 +316,21 @@ mary	../RysGitTutorialMarysRepository/ (fetch)
 mary	../RysGitTutorialMarysRepository/ (push)
 ```
 
-We can now use **mary** to refer to Mar's repository, which is located at ../RysGitTutorialMarysRepository. The **git remote add** command is used to bookmark another Git repository for easy access, and our connections can be seen in the figure below.
+We can now use mary to refer to Mar's repository, which is located at ../RysGitTutorialMarysRepository. **The git remote add command is used to bookmark another Git repository for easy access, and our connections can be seen in the figure below**.
 
 ![Screen Shot 2020-06-05 at 12 14 05](https://user-images.githubusercontent.com/24994818/83904777-1cae4400-a726-11ea-992e-9a47fb3bf53e.png)
 
-Now that our remote **repositories are setup, we will spend the rest of the module discussing remote **branches**
+**Now that our remote repositories are setup, we will spend the rest of the module discussing remote branches**.
 
 # 	* [Fetch Mary's Branches (you)](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-As noted earlier, we can use remote branches to access snapshots from another repository. Let's take a look at our current remote branches with the - flag.]()
+**As noted earlier, we can use remote branches to access snapshots from another repository**. Let's take a look at our current remote branches with the `-r` flag.
 
 ```console
 $ git branch -r
 ```
 
-Again, we don't have any. To populate our remote branch listing, we need to **fetch** the branches from Mary's repository:
+Again, we don't have any. **To populate our remote branch listing, we need to fetch the branches from Mary's repository**:
 
 ```console
 $ git fetch mary 
@@ -349,24 +351,24 @@ $ git branch -r
   mary/master
 ```
 
-This will go to the **"fetch"** location shown in **git remote -v** and download all of the branches it finds there into our repository. The resulting branches are shown below.
+**This will go to the "fetch" location shown in git remote -v and download all of the branches it finds there into our repository**. The resulting branches are shown below.
 
 ```console
   mary/bio-page
   mary/master
 ```
 
-Remote branches are always listed in the form remoteName/branchName so that they will never be mistaken for local branches. The above listing reflects the sate of Mar's repository at the time of the fetch, but they will not be automatically updated if Mary continues developing any of her branches.
+**Remote branches are always listed in the form remoteName/branchName so that they will never be mistaken for local branches**. The above listing reflects the sate of Mar's repository at the time of the fetch, but they will not be automatically updated if Mary continues developing any of her branches.
 
-That is to say, our remote branches are not **direct** links into Mary's repository -they are read-only copies of her branches, stored in our own repository. This means that we would have to do another fetch to access new updates.
+**That is to say, our remote branches are not direct links into Mary's repository -they are read-only copies of her branches, stored in our own repository**. This means that we would have to do another fetch to access new updates.
 
 ![Screen Shot 2020-06-05 at 12 25 09](https://user-images.githubusercontent.com/24994818/83905628-a1e62880-a727-11ea-944a-77e60c9a6399.png)
 
-The above figure shows the state of **our** repository. We have access to Mary's snapshot (represented by sqeares) and her branches, even though we don't have a real-time connection to Mary's repository.
+The above figure shows the state of our repository. **We have access to Mary's snapshot (represented by sqeares) and her branches, even though we don't have a real-time connection to Mary's repository**.
 
 # 	* [Check out a Remote Branch](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-Let's check out a remote branch to review Mary's changes.
+**Let's check out a remote branch to review Mary's changes**.
 
 ```console
 Fri Jun 05 ~/iOS/RysGitTutorialRepository 
@@ -391,15 +393,15 @@ Turn off this advice by setting config variable advice.detachedHead to false
 HEAD is now at 49baa6e Add bio page for Mary
 ```
 
-This puts us in a **detached** HEAD state, just like we were in when we checked out a dangling commit. This should not be that surprising, considering that our remote branches are **copies** of Mary's branches. Checking out a remote branch takes our HEAD off the tip of a local branch, illustrated by the following diagram.
+This puts us in a detached HEAD state, just like we were in when we checked out a dangling commit. This should not be that surprising, considering that our remote branches are copies of Mary's branches. **Checking out a remote branch takes our HEAD off the tip of a local branch, illustrated by the following diagram**.
 
 ![Screen Shot 2020-06-05 at 12 39 29](https://user-images.githubusercontent.com/24994818/83906672-a01d6480-a729-11ea-83ee-c616558f6d26.png)
 
-We can't continue developing if we are not on a local branch. To build on **mary/master** we either need to merge it into our own local **master** or create another branch. We did the latter in Branches, Part I to build on an old commit and in the previous module to revive a "lost commit, but right now we are just looking at what Mary did, so the **detached** HEAD state does not really affect us.
+We can't continue developing if we are not on a local branch. To build on mary/master we either need to merge it into our own local master or create another branch. **We did the latter in Branches, Part I to build on an old commit and in the previous module to revive a "lost commit, but right now we are just looking at what Mary did, so the detached HEAD state does not really affect us**.
 
 # 	* [Find Mary's Changes](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-We can use the same log-filtering syntax from the previous module to view Mary's changes:
+**We can use the same log-filtering syntax from the previous module to view Mary's changes**:
 
 ```console
 Fri Jun 05 ~/iOS/RysGitTutorialRepository 
@@ -423,11 +425,11 @@ Fri Jun 05 ~/iOS/RysGitTutorialRepository
 $ 
 ```
 
-This will not output anything, since we haven't altered our data-base since Mary cloned it, In other words, our history hasn't **diverged** - **we are just behind by a commit**.
+**This will not output anything, since we haven't altered our data-base since Mary cloned it, In other words, our history hasn't diverged - we are just behind by a commit**.
 
 # 	* [Merge Mary's Changes](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-Let's approve Mary's changes and integrate them into our own **master** branch.
+**Let's approve Mary's changes and integrate them into our own master branch**.
 
 ```console
 Sat Jun 06 ~/iOS/RysGitTutorialRepository 
@@ -439,25 +441,25 @@ Fast-forward
 Sat Jun 06 ~/iOS/RysGitTutorialRepository 
 ```
 
-Even though **mary/master** is a remote branch, this still results in a **fast-forward** merge because there is a linear path from our **master** to the tip of **mary/master**
+Even though mary/master is a remote branch, this still results in a fast-forward merge because there is a linear path from our master to the tip of mary/master
 
 ![Screen Shot 2020-06-06 at 12 44 47](https://user-images.githubusercontent.com/24994818/83950893-86e0ea80-a7f3-11ea-8a1a-aa3b15bfe9ee.png)
 
-After the merge, the snapshots from Mary's remote branch become a part of a our local **master** branch. As a result, our **master** is now synchronized with Mary's:
+**After the merge, the snapshots from Mary's remote branch become a part of a our local master branch**. As a result, our master is now synchronized with Mary's:
 
 ![Screen Shot 2020-06-06 at 12 46 36](https://user-images.githubusercontent.com/24994818/83950922-c6a7d200-a7f3-11ea-9969-4f0a5bb9d842.png)
 
-Notice that we only interacted with Mary's **master** branch, even though we had access to her **bio-page**. If we hadn't been pretending to be Mary, we wouldn't have known what this feature branch was for it or if it was ready to be merged. But, since we've designated **master** as a stable branch for the project, it was safe to integrate those updates (assuming Mary was also aware of this convention).
+**Notice that we only interacted with Mary's master branch, even though we had access to her bio-page**. If we hadn't been pretending to be Mary, we wouldn't have known what this feature branch was for it or if it was ready to be merged. But, since we've designated master as a stable branch for the project, it was safe to integrate those updates (assuming Mary was also aware of this convention).
 
 # 	* [Push a Dummy Branch](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-To complement our **git fetch** command, we will take a brief look at **pushing**. Fetching and pushing are **almost** opposites, in that fetching imports branches, while pushing exports branches to another repository. Let's take a look:
+To complement our git fetch command, we will take a brief look at pushing. **Fetching and pushing are almost opposites, in that fetching imports branches, while pushing exports branches to another repository**. Let's take a look:
 
 ```console
 $ git branch dummy
 ```
 
-This creates a new branch called **dummy**.
+**This creates a new branch called dummy**.
 
 ```console
 $ git push mary dummy
@@ -480,11 +482,11 @@ $ git branch
 * master
 ```
 
-You should find a new **dummy** branch in her **local** branch listing. I said that **git fetch** and **git push** are **almost** opposites because **pushing creates a new local branch**, while **fetching imports commits into remote branches**.
+You should find a new dummy branch in her local branch listing. **I said that git fetch and git push are almost opposites because pushing creates a new local branch, while fetching imports commits into remote branches**.
 
-Now put yourself in Mary's shoes. She was a developing in her own repository when, all of a sudden, a new **dummy** branch appeared out of nowhere. Obviously, pushing branches into other people's repositories can make for a chaotic workflow. So, as a general rule, **you should never push into another developer's repository. But then, why does **git push** even exist?
+Now put yourself in Mary's shoes. She was a developing in her own repository when, all of a sudden, a new dummy branch appeared out of nowhere. Obviously, pushing branches into other people's repositories can make for a chaotic workflow. **So, as a general rule, you should never push into another developer's repository**. But then, why does git push even exist?
 
-Over the next few modules, we will see that pushing is a necessary tool for maintaining public repositories. Until then, just remember to never, ever push into one of your friends's repositories. Let's get rid of these dummy branches and return to our repository.
+**Over the next few modules, we will see that pushing is a necessary tool for maintaining public repositories**. Until then, just remember to never, ever push into one of your friends's repositories. Let's get rid of these dummy branches and return to our repository.
 
 ```console
 $ git branch -d dummy
@@ -507,21 +509,21 @@ Deleted branch dummy (was 49baa6e).
 
 # 	* [Push a New Tag](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-An important property of **git push** is that it does not automatically push tag associated with a particular branch. Let's examine this by creating a new tag.
+**An important property of git push is that it does not automatically push tag associated with a particular branch**. Let's examine this by creating a new tag.
 
-```cosole
+```console
 Wed Jun 10 ~/iOS/RysGitTutorialRepository 
 $ git tag -a v2.0 -m "An even stabler version of the website"
 ```
 
-We now have a v2.0 tag in my git repository, which we can see by running the **git tag** command. Now, let's try pushing the branch to Mary's repository.
+**We now have a v2.0 tag in my git repository, which we can see by running the git tag command**. Now, let's try pushing the branch to Mary's repository.
 
 ```console
 $ git push mary master
 Everything up-to-date
 ```
 
-Git will say her **master** branch is already up-to-date, and her repository will remain unchanged. Instead of pushing the branch that contains the tag. Git requires us to manually push the tag itself:
+Git will say her master branch is already up-to-date, and her repository will remain unchanged. Instead of pushing the branch that contains the tag. **Git requires us to manually push the tag itself**:
 
 ```console
 $ git push mary v2.0
@@ -533,7 +535,7 @@ To ../RysGitTutorialMarysRepository/
  * [new tag]         v2.0 -> v2.0
 ```
 
-You should now be able to see the v2.0 tag in Mary's repository with a quick **git tag**. It is very easy to forget to push new tags, so if it seems like your project has lost a tag or two, it is most likely because you didn't to push them to the remote repository.
+**You should now be able to see the v2.0 tag in Mary's repository with a quick git tag**. It is very easy to forget to push new tags, so if it seems like your project has lost a tag or two, it is most likely because you didn't to push them to the remote repository.
 
 ```console
 Wed Jun 10 ~/iOS/RysGitTutorialRepository 
@@ -546,18 +548,18 @@ v2.0
 
 # 	* [Conclusion](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
-In this module, we learned how remote branches can be used to access content in someone else's repository. The remotes listed in **git remote** are merely bookmarks for a full path to another repository. We used a local path, but as we will soon see, Git can use the SSH protocol to access repositories on another computer.
+In this module, we learned how remote branches can be used to access content in someone else's repository. The remotes listed in git remote are merely bookmarks for a full path to another repository. We used a local path, but as we will soon see, Git can use the SSH protocol to access repositories on another computer.
 
-The convention of **master** as a stable branch allowed us to pull changes without consulting Mary, but this doesn't necessarily have to be the case. When implementing your own workflow, Gif offers you a lot of flexibility about when and where you should pull from your team members. As long as you clearly define your project conventions, you can designate a special uses or privileges to **any** branch.
+The convention of master as a stable branch allowed us to pull changes without consulting Mary, but this doesn't necessarily have to be the case. When implementing your own workflow, Gif offers you a lot of flexibility about when and where you should pull from your team members. As long as you clearly define your project conventions, you can designate a special uses or privileges to any branch.
 
-That said, it is important to note that remotes are for **people**, whereas branches are for **topics**. Do **not** create separate branches for each of your developers -give them separate repositories and bookmark them with **git remote add**. Branches should always be for project development, not user management.
+That said, it is important to note that remotes are for people, whereas branches are for topics. Do not create separate branches for each of your developers -give them separate repositories and bookmark them with git remote add. Branches should always be for project development, not user management.
 
 Now that we know how Git shares information between repositories, we can add some more structure to our multi-user development environment. The next module will show you how to set up and access a shared central repository.
 
 # 	* [Quick Reference](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
 ```console
-$ git -- clone remothePath
+$ git clone <remotePath>
 ```
 Create a copy of a remote Git repository
 
@@ -568,28 +570,28 @@ List remote repositories.
 
 
 ```console
-$ git remote add remoteName remotePath
+$ git remote add <remoteName> <remotePath>
 ```
 Add a remote repository
 
 
 ```console
-$ git fetch remoteName
+$ git fetch <remoteName>
 ```
 Download remote branch information, but do not merge anything
 
 ```console
-$ git merge remoteName/branchName
+$ git merge <remoteName>/<branchName>
 ```
 Merge a remote branch into the checked-out branch
 
 ```console
-git branch -r
+$ git branch -r
 ```
 List remote branches
 
 ```console
-git push remoteName branchName
+$ git push <remoteName> <branchName>
 ```
 Push a local branch to another repository
 
@@ -599,12 +601,12 @@ $ git branch -r
 List remote branches.
 
 ```console
-$ git push remoteName branchName
+$ git push <remoteName> <branchName>
 ```
 Push a local branch to another repository
 
-```consol
-git push remoteName tagName
+```console
+$ git push <remoteName> <tagName>
 ```
 Push a tag to another repository
 
