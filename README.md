@@ -18,6 +18,7 @@
 14. [x] [14. Push a New Tag](https://github.com/c4arl0s/8RemotesRysGitTutorial#-push-a-new-tag)
 15. [x] [15. Conclusion](https://github.com/c4arl0s/8RemotesRysGitTutorial#-conclusion)
 16. [x] [16. Quick Reference](https://github.com/c4arl0s/8RemotesRysGitTutorial#-quick-reference)
+17. [x] [17. Use an old repositoty to push the current branch to another repository in Github](https://github.com/c4arl0s/8Remotes#17-use-an-old-repositoty-to-push-the-current-branch-to-another-repository-in-github)
  
 # [8 Remotes Rys Git Tutorial](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
 
@@ -611,4 +612,25 @@ $ git push <remoteName> <tagName>
 ```
 Push a tag to another repository
 
+
+# [17. Use an old repositoty to push the current branch to another repository in Github](https://github.com/c4arl0s/8RemotesRysGitTutorial#8-remotes-rys-git-tutorial---content)
+
+1. Create a repository on github, name: RepositoryOnGithub
+2. Navigate to the original repository you want to use
+
+```console
+$ cd /path/to/original/repository
+```
+
+2. Push the master or main branch, force to delete the trash you create after creating it.
+
+```console
+$ git push -f https://github.com/c4arl0s/RepositoryOnGithub.git master:main
+```
+
+3. Clone RepositoryOnGithub repository. It will contain all the files and history of the original repository.
+
+```console
+$ git clone https://github.com/c4arl0s/RepositoryOnGithub.git
+```
 
